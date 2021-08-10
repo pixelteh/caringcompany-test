@@ -50,7 +50,7 @@ export const profileButton = [
 
 export const events = [
 	{
-		id: 'a',
+		id: '1',
 		title: 'Ashley Simons',
 		start: '2021-08-09T11:00:00',
 		borderColor: Colors.dullOrange,
@@ -60,7 +60,7 @@ export const events = [
 		},
 	},
 	{
-		id: 'b',
+		id: '2',
 		title: 'Andrew Peterts Veelo',
 		start: '2021-08-09T11:15:00',
 		extendedProps: {
@@ -69,7 +69,7 @@ export const events = [
 		},
 	},
 	{
-		id: 'c',
+		id: '3',
 		title: 'Ashley Booravoola',
 		start: '2021-08-09T11:30:00',
 		extendedProps: {
@@ -78,7 +78,7 @@ export const events = [
 		},
 	},
 	{
-		id: 'd',
+		id: '4',
 		title: 'Peter Meyers',
 		start: '2021-08-09T11:45:00',
 		borderColor: Colors.reddish,
@@ -88,7 +88,7 @@ export const events = [
 		},
 	},
 	{
-		id: 'k',
+		id: '5',
 		title: 'Ashley Booravoola',
 		start: '2021-08-09T12:15:00',
 		extendedProps: {
@@ -97,7 +97,7 @@ export const events = [
 		},
 	},
 	{
-		id: 'i',
+		id: '6',
 		title: 'Peter Meyers',
 		start: '2021-08-09T13:15:00',
 		borderColor: Colors.reddish,
@@ -107,7 +107,7 @@ export const events = [
 		},
 	},
 	{
-		id: 'e',
+		id: '7',
 		title: 'Andrew Peters Veelo',
 		start: '2021-08-10T11:30:00',
 		extendedProps: {
@@ -116,7 +116,7 @@ export const events = [
 		},
 	},
 	{
-		id: 'f',
+		id: '8',
 		title: 'Ashley Booravoola',
 		start: '2021-08-10T11:45:00',
 		extendedProps: {

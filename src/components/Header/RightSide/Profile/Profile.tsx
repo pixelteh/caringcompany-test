@@ -17,9 +17,13 @@ const Profile = () => {
       </div>
       <div className={classes.buttonGroup}>
         <ButtonGroup style={{ height: '100%' }}>
-          {profileButton.map(item => <CIconButton
-            item={item} style={{ icon: { width: 16, height: 16 }, button: { width: 32 } }}
-          />)}
+          {profileButton.map((item, index) => (
+            <CIconButton
+              key={index}
+              item={item}
+              style={{ icon: { width: 16, height: 16 }, button: { width: 32 } }}
+            />
+          ))}
         </ButtonGroup>
       </div>
     </div>

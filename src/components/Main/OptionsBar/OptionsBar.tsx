@@ -12,6 +12,7 @@ const OptionsBar = () => {
         <div className={classes.buttonWrapper}>
           {leftSideButtons.map((item, index) => (
             <button
+              key={index}
               className={clsx(classes.button, {
                 [ classes.activeButton ]: item?.active,
                 [ classes.lastOfTypeButton ]: index === leftSideButtons.length - 1,
@@ -29,8 +30,8 @@ const OptionsBar = () => {
           ))}
         </div>
         <div className={classes.buttonWrapper}>
-          {rightSideButtons.map(item => (
-            <button className={clsx(classes.button, classes.rightButton)}>
+          {rightSideButtons.map((item, index) => (
+            <button key={index} className={clsx(classes.button, classes.rightButton)}>
               <img
                 src={item.icon}
                 alt={item.alt}

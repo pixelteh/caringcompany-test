@@ -3,7 +3,17 @@ import { Button } from "@material-ui/core";
 import useStyles from "./icon-button-styles";
 import clsx from "clsx";
 
-const CIconButton = ({ item, style }: any) => {
+interface IProps {
+  item: {
+    active?: boolean,
+    alt: string,
+    icon: string,
+    name?: string
+  };
+  style: any
+}
+
+const CIconButton = ({ item, style }: IProps) => {
   const classes = useStyles();
 
   return (

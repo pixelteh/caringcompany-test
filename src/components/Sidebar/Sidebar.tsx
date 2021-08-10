@@ -8,8 +8,10 @@ const Sidebar = () => {
 
   return (
     <div className={classes.container}>
-      {sidebarButton.map(item => <CIconButton
-        item={item} style={{
+      {sidebarButton.map((item, index) => <CIconButton
+        item={item} 
+        key={index}
+        style={{
         icon: { width: 16, height: 16, margin: 0 },
         button: {
           height: 36,
