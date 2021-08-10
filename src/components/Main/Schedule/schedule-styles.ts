@@ -9,6 +9,18 @@ const useStyles = makeStyles({
     '& table.fc-scrollgrid.fc-scrollgrid-liquid': {
       border: 'none',
     },
+    '&&& .fc-timegrid-slot': {
+      borderBottom: 'transparent'
+    },
+    '&&& .fc-timegrid-slot-lane': {
+      borderBottom: `1px dashed ${Colors.black}`
+    },
+    '& .fc-timegrid-slot-lane.fc-timegrid-slot-minor': {
+      borderTop: `1px dashed ${Colors.black}`,
+      borderBottom: `1px dashed ${Colors.black}`,
+      borderLeft: `1px solid ${Colors.black}`,
+      borderRight: `1px solid ${Colors.black}`,
+    },
     '& .fc-timegrid-slot-label.fc-timegrid-slot-minor': {
       border: 'transparent',
     },
@@ -21,7 +33,14 @@ const useStyles = makeStyles({
     '& tr.fc-scrollgrid-section:nth-child(2)': {
       display: 'none',
     },
-    '& .fc-theme-standard td, .fc-theme-standard th': {
+    '& tr.fc-scrollgrid-section-header > td': {
+      borderBottom: 'none'
+    },
+    '& .fc-theme-standard th': {
+      border: `1px solid ${Colors.black}`,
+      borderBottom: 'none'
+    },
+    '& .fc-theme-standard td': {
       border: `1px solid ${Colors.black}`,
       height: 28,
     },
@@ -56,6 +75,13 @@ const useStyles = makeStyles({
       right: '0!important',
       height: 28,
     },
+    '& .fc-timegrid-event .fc-event-main': {
+      padding: '3px 4px 0 0',
+      display: 'inline-block',
+      backgroundColor: 'rgba(255, 255, 255, 0.12)',
+      opacity: 0.8,
+      boxShadow: '0 0 1px 0 rgba(0, 0, 0, 0.5)!important',
+    }
   },
   timeNowIndicator: {
     backgroundColor: Colors.niceBlue,
@@ -70,18 +96,19 @@ const useStyles = makeStyles({
     left: '18px',
     top: '0px',
     width: '30px',
+    textAlign: 'center',
   },
   timeNowLine: {
     height: 1,
     display: 'block',
     width: '100vw',
-    border: `1px dashed ${Colors.twilightBlue}`,
+    borderBottom: `1px dashed ${Colors.twilightBlue}`,
     marginLeft: '32px',
     marginTop: '5px',
   },
   headerCellWrapper: {
     color: Colors.brownGrey,
-    marginLeft: 8,
+    marginLeft: 4,
     marginTop: 2,
   },
   date: {
@@ -99,10 +126,11 @@ const useStyles = makeStyles({
     width: '100%',
     alignSelf: 'flex-start',
     height: 27,
-    backgroundColor: 'rgba(255, 255, 255, 0.12)',
+    backgroundColor: 'transparent',
     border: 'none',
     borderLeft: `4px solid ${Colors.greenBlue}`,
-    boxShadow: '0 0 1px 0 rgba(0, 0, 0, 0.5)!important',
+    boxShadow: 'none!important',
+    opacity: 0.8,
   },
   eventWrapper: {
     display: 'flex',
@@ -117,6 +145,7 @@ const useStyles = makeStyles({
     margin: 0,
     backgroundColor: 'rgba(255, 255, 255, 0.06)',
     marginRight: 5,
+    marginTop: '-3px',
   },
   icon: {
     width: 20,

@@ -6,6 +6,7 @@ const useStyles = makeStyles({
     width: 124,
     alignItems: 'center',
     height: 24,
+    fontFamily: 'Poppins, sans-serif',
     // padding: '4px 7px 6px 6px',
     opacity: 0.72,
     backgroundColor: '#121212',

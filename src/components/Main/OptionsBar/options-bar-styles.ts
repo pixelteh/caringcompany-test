@@ -33,6 +33,9 @@ const useStyles = makeStyles({
     fontWeight: 500,
     borderLeft: `1px solid ${Colors.blackTwo}`,
   },
+  lastOfTypeButton: {
+    borderRight: `1px solid ${Colors.blackTwo}`,
+  },
   rightButton: {
     paddingRight: 15,
     paddingLeft: 9,

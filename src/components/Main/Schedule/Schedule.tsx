@@ -1,5 +1,5 @@
 import React from "react";
-import FullCalendar, { EventContentArg } from "@fullcalendar/react";
+import FullCalendar, { EventContentArg, SlotLabelContentArg } from "@fullcalendar/react";
 import timeGridPlugin from '@fullcalendar/timegrid';
 import useStyles from "./schedule-styles";
 import { DayHeaderContentArg, NowIndicatorContentArg } from '@fullcalendar/common';
@@ -32,6 +32,16 @@ const Schedule = () => {
     />
   );
 
+  const slotLabelContent = (arg: SlotLabelContentArg) => {
+    const result = arg.text.match(/([0-9]+)(am|pm)/);
+    const [ , time, chars ] = result?.flat() || [];
+    if ((Number(time) % 3) === 0) {
+      return `${time} ${chars.toUpperCase()}`;
+    } else {
+      return time
+    }
+  };
+
   return (
     <div className={classes.root}>
       <FullCalendar
@@ -50,6 +60,7 @@ const Schedule = () => {
         eventTextColor={Colors.veryLightPink}
         eventClassNames={classes.eventStyle}
         eventContent={eventContent}
+        slotLabelContent={slotLabelContent}
       />
     </div>
   );

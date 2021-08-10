@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core";
+import { Colors } from '../../theme';
 
 const useStyles = makeStyles({
   button: {
@@ -10,9 +11,9 @@ const useStyles = makeStyles({
     },
   },
   activeButton: {
-    backgroundColor: 'rgba(255, 255, 255, 0.06)',
+    backgroundColor: 'rgb(15, 110, 190, 0.16)',
     borderRadius: 0,
-    borderLeft: '2px solid #0f6ebe',
+    borderLeft: `2px solid ${Colors.niceBlue}`,
   },
   icon: {
     width: 8,

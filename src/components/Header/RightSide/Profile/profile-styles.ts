@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     display: 'flex',
     alignItems: 'center',
     paddingRight: 14,
-    borderRight: `1px solid ${Colors.white90}`,
+    borderRight: `1px solid rgb(230,230,230,0.5)`,
     margin: '10px 0',
   },
   time: {
